@@ -2,17 +2,17 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "LCOpenSDK"
-  spec.version      = "3.10.0"
-  spec.summary      = "A short description of LCOpenSDK."
-  spec.description  = "乐橙云开放平台SDK"
+  spec.version      = "3.10.11"
+  spec.summary      = "乐橙云开放平台SDK"
+  spec.description  = "乐橙云开放平台SDK,开发者可以用SDK开发APP"
   spec.homepage     = "https://github.com/Hanyanrui815/LCOpenSDK"
   spec.license      = { :type => "MIT", :file => "LICENSE" } 
   spec.author       = { "Hanyanrui815" => "hanyanrui815@163.com" }
   spec.platform     = :ios, "8.0"  
-  spec.source       = { :git => "https://github.com/Hanyanrui815/LCOpenSDK.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/Hanyanrui815/LCOpenSDK.git", :tag => spec.version.to_s }
   spec.frameworks   = 'Foundation', 'SystemConfiguration', 'CoreVideo', 'CoreMedia', 'CFNetwork', 'VideoToolbox', 'AudioToolbox', 'AVFoundation'
   #需要包含的源文件（也是个坑）按照你的文件层级来
-  spec.source_files = 'Framework/LCOpenSDKDynamic.framework/Headers/**/*.{h}'
+  #spec.source_files = 'Framework/LCOpenSDKDynamic.framework/Headers/**/*.{h}'
    #你的SDK路径（因为传的是静态库，这个必须要）
   spec.vendored_frameworks = 'Framework/LCOpenSDKDynamic.framework'
   #spec.source_files = 'LCOpenSDKDynamic.framework/Headers/**/*'
